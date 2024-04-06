@@ -1,36 +1,39 @@
 {% load static %}
 <html lang="fr">
+
 <head>
-<!--css import -->
-    <link rel="stylesheet" href="{% static 'Nova_tech/uikit.min.css' %}">
-    <link rel="stylesheet" href="{% static 'Nova_tech/uikit.css' %}">
-<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />-->
+    <!--css import -->
+    <link rel="stylesheet" href="{% static 'Nova_tech/css/uikit.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Nova_tech/css/uikit.css' %}">
+    <link rel="stylesheet" href="{% static 'Nova_tech/css/main.css' %}">
+    <script type="text/javascript" src="{% static 'Nova_tech/css/uikit-icons.min.js' %}"></script>
+
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />-->
     <meta charset="UTF-8">
-    <title>Novatech</title>
+
+    <!-- Le tire de la page qui sera remplacé dans toutes les pages avec une valeur donnée explicitement ou provenant de la vue  -->
+    {% block title %}
+    <title>{{ title }}</title>
+    {% endblock %}
 </head>
+
 <body>
-<!--header-->
-<main>
-
-</main>
-<!--fin header-->
+    <!--header-->
+    {% include "Nova_tech/component/header.html" %}
+    <!--fin header-->
 
 
-<!--body-->
-{% block content %}
+    <!--body-->
+    {% block content %}
 
-{% endblock %}
-<!--end body-->
+    {% endblock %}
+    <!--end body-->
 
 
+    <!--footer-->
+    {% include "Nova_tech/component/footer.html" %}
+    <!--fin footer-->
 
-<!--footer-->
-
-<!--js import-->
-<script type="text/javascript" src="{% static 'Nova_tech/uikit.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'Nova_tech/uikit.js' %}"></script>
-<script type="text/javascript" src="{% static 'Nova_tech/uikit-icons.min.js' %}"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>-->
 </body>
+
 </html>
