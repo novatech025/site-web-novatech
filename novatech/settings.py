@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'Nova_tech',
     'event',
     'tinymce',
+    'contact',
 ]
 
 MIDDLEWARE = [

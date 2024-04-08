@@ -27,5 +27,6 @@ handler404 = "Nova_tech.views.erreur_404"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('event/',include("event.urls")),
-    path('',include("Nova_tech.urls")),
+    path('contact/', include("contact.urls")),
+    path('Nova_tech/',include("Nova_tech.urls")),
 ]
