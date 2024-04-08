@@ -141,7 +141,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 
 
-# Configuration de la l'application tinymce pour le inputs WYSIWYG 
+# Configuration de la l'application tinymce pour les inputs WYSIWYG 
 
 TINYMCE_DEFAULT_CONFIG = {
     'cleanup_on_startup': True,
@@ -208,6 +208,7 @@ TINYMCE_DEFAULT_CONFIG = {
 
     input.click();
   }''',
+  
 #   'image_list': '''(success) => {
 #     success([
 #       { title: 'Dog', value: 'mydog.jpg' },
