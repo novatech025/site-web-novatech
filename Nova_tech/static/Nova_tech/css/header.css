@@ -1,12 +1,25 @@
 
 header .uk-navbar-container {
     background-color: var(--color1) !important;
+   
 }
 
+
+header .uk-navbar-container .uk-container {
+    /* padding-left: 2%;
+    margin: 0px; */
+}
 
 header .uk-navbar-container .uk-active a {
     color: white;
     font-weight: bold;
+}
+
+
+.header-logo {
+    height: 50px;
+    /* width: 100px; */
+    margin-right: 20px;
 }
 
 
@@ -16,4 +29,27 @@ header .uk-navbar-container .uk-active a {
     padding: 10px 20px;
     color: var(--color1);
     font-weight: bold;
+    transition: .3s all ease;
+    box-shadow: 2px 2px 1px 2px rgb(199, 199, 199), -6px -6px 5px 2px var(--color1);
+}
+
+.contact-us-cta:hover {
+    text-decoration: none;
+    transition: .3s all ease;
+    scale: 1.02;
+    color: var(--color1);
+
+}
+
+.contact-us-cta svg {
+    border: 2px solid var(--color1);
+    border-radius: 50%;
+    transition: .3s all ease;
+}
+
+.contact-us-cta:hover svg {
+    transform: translateX(5px);
+    color: var(--color1);
+    transition: .3s all ease;
+
 }

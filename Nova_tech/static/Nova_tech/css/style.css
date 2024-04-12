@@ -48,7 +48,7 @@
 .home-services-div {
     border-radius: 30px;
     height: 900px;
-    background: linear-gradient(70deg, var(--color1) 2%, var(--color5) 40%);
+    /* background: linear-gradient(70deg, var(--color1) 2%, var(--color5) 40%); */
     width: 90%;
     /* margin: auto; */
     margin: 40px auto;
