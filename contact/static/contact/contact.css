@@ -1,14 +1,21 @@
 .errorlist{
     color: red;
 }
+
 #required{
     background-color: black;
 }
-.nom,.mail,.message,#envoyer{
+
+.message-form {
+    background-color: red;
+}
+
+.nom, .mail, #envoyer {
     width: 50%;
     padding: 1%;
     margin: 2%;
 }
+
 #envoyer{
     width: 52%;
     padding: 2%;
@@ -22,6 +29,8 @@
 } */
 .supcont{
     display: flex;
+    /* background-color: red !important; */
+    padding: 5%;
 }
 .message{
     height: 50px;

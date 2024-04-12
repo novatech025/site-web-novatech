@@ -4,7 +4,6 @@ from .models import utilisateures
 
 
 def index(request):
-    print('bonjourmlkjhg8ifds888888888888888888888888888888888888888888')
     forme = commentaireform()
     message = ''
     if request.method == 'POST':

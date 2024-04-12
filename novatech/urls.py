@@ -28,5 +28,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('event/',include("event.urls")),
     path('contact/', include("contact.urls")),
-    path('Nova_tech/',include("Nova_tech.urls")),
+    path('',include("Nova_tech.urls")),
 ]
