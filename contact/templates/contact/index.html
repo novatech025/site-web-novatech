@@ -3,105 +3,105 @@
 
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'contact/contact.css' %}"> 
-    <div class="uk-inline">
+<link rel="stylesheet" href="{% static 'contact/contact.css' %}">
+<div class="uk-inline">
 
-        <img src="{% static 'contact/image/image2.jpg' %}" alt="juste une photo de la facultee">
-        <div class="uk-position-top-center uk-overlay ">
-            <h1>Bienvenue chez Novatech <br>
+    <img src="{% static 'contact/image/image2.jpg' %}" alt="juste une photo de la facultee">
+    <div class="uk-position-top-center uk-overlay ">
+        <h1>Bienvenue chez Novatech <br>
             Votre partenaire de confiance pour booster votre transformation digitale.</h1>
-        </div>
-        <div class="uk-position-center-right uk-overlay ">
-            <h3>
-               
-                Experts passionnés, nous vous accompagnons dans la<br> création de solutions numériques
-                innovantes et sur-mesure pour:<br>
-                
-                Développer votre activité<br>
-                Gagner en efficacité<br>
-                Améliorer votre compétitivité<br>
-                Prêts à relever ensemble les défis du numérique ?<br>
-                
-                Contactez-nous dès aujourd'hui !<br>
-            </h3>
-        </div>
-        <div class="uk-position-bottom-center uk-overlay uk-overlay-default">
-            <h2 uk-tooltip="Patrick Drahi">
-                "Le numérique n'est pas une révolution, c'est une nouvelle 
-                façon de vivre."
-            </h2>
-            
-        </div>  
     </div>
-    <div class="supcont">
-        <div class="lefte">
-            <ul>
-                <h2>Besoin d'un coup de pouce?</h2> 
+    <div class="uk-position-center-right uk-overlay ">
+        <h3>
 
-                <li> Notre équipe d'experts est à votre disposition pour répondre à vos questions et vous 
-                    accompagner dans vos projets numériques.</li>
+            Experts passionnés, nous vous accompagnons dans la<br> création de solutions numériques
+            innovantes et sur-mesure pour:<br>
 
-                <li> 
-                    Contactez-nous par email à 
-                    <ul>
-                        <li>novatech025@gmail.com</li>
-                    </ul>
-                </li>
-                <li>
-                    par téléphone au :
-                    <ul>
-                        <li>+237651091118</li>
-                        <li>+237696552673</li>
-                        <li>+237674242398</li>
-                    </ul>
-                </li>
-                <h3>Nous sommes impatients de vous entendre !</h3>
-            </ul>
-            <p> 
-                "Un projet en tête ? Parlons-en !"<br>
-                "Besoin d'un conseil ? Contactez-nous !"<br>
-                "N'hésitez pas à nous contacter, nous sommes là pour vous aider !"<br>
-                "Votre satisfaction est notre priorité !"
-            </p>
-        </div>
-        <div class="righte">
-            <center>
-                <h2>Remplissez ce bref formulaire et nous vous contacterons rapidement</h2>
-                
-                <form method="post">
-                    {% csrf_token %}
-                    {{ forme.as_p }}
-                    <input type="submit" value="envoyer" name="envoyer" id="envoyer">
-                </form>
-            </center>
-        </div>
+            Développer votre activité<br>
+            Gagner en efficacité<br>
+            Améliorer votre compétitivité<br>
+            Prêts à relever ensemble les défis du numérique ?<br>
+
+            Contactez-nous dès aujourd'hui !<br>
+        </h3>
     </div>
-    
-    {% if form.name.errors %}
-    <ol>
+    <div class="uk-position-bottom-center uk-overlay uk-overlay-default">
+        <h2 uk-tooltip="Patrick Drahi">
+            "Le numérique n'est pas une révolution, c'est une nouvelle
+            façon de vivre."
+        </h2>
+
+    </div>
+</div>
+<div class="supcont">
+    <div class="lefte">
+        <ul>
+            <h2>Besoin d'un coup de pouce?</h2>
+
+            <li> Notre équipe d'experts est à votre disposition pour répondre à vos questions et vous
+                accompagner dans vos projets numériques.</li>
+
+            <li>
+                Contactez-nous par email à
+                <ul>
+                    <li>novatech025@gmail.com</li>
+                </ul>
+            </li>
+            <li>
+                par téléphone au :
+                <ul>
+                    <li>+237651091118</li>
+                    <li>+237696552673</li>
+                    <li>+237674242398</li>
+                </ul>
+            </li>
+            <h3>Nous sommes impatients de vous entendre !</h3>
+        </ul>
+        <p>
+            "Un projet en tête ? Parlons-en !"<br>
+            "Besoin d'un conseil ? Contactez-nous !"<br>
+            "N'hésitez pas à nous contacter, nous sommes là pour vous aider !"<br>
+            "Votre satisfaction est notre priorité !"
+        </p>
+    </div>
+    <div class="righte">
+        <center>
+            <h2>Remplissez ce bref formulaire et nous vous contacterons rapidement</h2>
+
+            <form method="post" class="message-form">
+                {% csrf_token %}
+                {{ forme.as_p }}
+                <input type="submit" value="envoyer" name="envoyer" id="envoyer">
+            </form>
+        </center>
+    </div>
+</div>
+
+{% if form.name.errors %}
+<ol>
     {% for error in form.name.errors %}
-        <li><strong>{{ error|escape }}</strong></li>
+    <li><strong>{{ error|escape }}</strong></li>
     {% endfor %}
-    </ol>
-    {% endif %}
+</ol>
+{% endif %}
 
-    <center>
-        <p uk-tooltip="Steve Ballmer">
-            "L'avenir appartient à ceux qui savent saisir les opportunités offertes par le numérique."
-        </p>
-        <p uk-tooltip="François Hollande">
-            "Le numérique n'est pas une menace pour l'emploi, c'est une opportunité de 
-            créer de nouveaux emplois."
-        </p>
-        <p uk-tooltip="Emmanuel Macron">
-            "Le numérique est un facteur de progrès social et économique. Il est important 
-            de ne laisser personne au bord de la route."
-        </p>
-        <p uk-tooltip="Kofi Annan">
-            "Le numérique est un outil puissant qui peut être utilisé pour le 
-            meilleur ou pour le pire. C'est à nous de décider comment nous allons l'utiliser."  
-        </p>
-    </center> 
-    {{message}}
+<center>
+    <p uk-tooltip="Steve Ballmer">
+        "L'avenir appartient à ceux qui savent saisir les opportunités offertes par le numérique."
+    </p>
+    <p uk-tooltip="François Hollande">
+        "Le numérique n'est pas une menace pour l'emploi, c'est une opportunité de
+        créer de nouveaux emplois."
+    </p>
+    <p uk-tooltip="Emmanuel Macron">
+        "Le numérique est un facteur de progrès social et économique. Il est important
+        de ne laisser personne au bord de la route."
+    </p>
+    <p uk-tooltip="Kofi Annan">
+        "Le numérique est un outil puissant qui peut être utilisé pour le
+        meilleur ou pour le pire. C'est à nous de décider comment nous allons l'utiliser."
+    </p>
+</center>
+{{message}}
 
 {% endblock %}

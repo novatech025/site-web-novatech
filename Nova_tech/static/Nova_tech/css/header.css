@@ -1,0 +1,19 @@
+
+header .uk-navbar-container {
+    background-color: var(--color1) !important;
+}
+
+
+header .uk-navbar-container .uk-active a {
+    color: white;
+    font-weight: bold;
+}
+
+
+.contact-us-cta {
+    background-color: white;
+    border-radius: 40px;
+    padding: 10px 20px;
+    color: var(--color1);
+    font-weight: bold;
+}

@@ -20,5 +20,9 @@ class commentaireform(forms.Form):
         'class':'mail'
     }))
     message = forms.CharField( label='' ,widget=forms.Textarea(attrs={
-        'class':'message'
+        'class':'message',
+        "placeholder": "Rédigez votre message ici...",
+        "cols":"30", 
+        "rows":"10"
+
     }))
