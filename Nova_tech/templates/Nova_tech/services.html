@@ -8,147 +8,22 @@
     <div class="uk-container">
       <h2 class="service uk-heading-medium">Nos Services</h2>
       <div class="uk-child-width-1-3@m" uk-grid>
-        <!-- Développement WEB -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service1.jpg" alt="Développement WEB">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Développement WEB</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Développement Mobile -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service2.jpg" alt="Développement Mobile">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Développement WEB</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Développement des progiciels -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service3.jpg" alt="Développement des progiciels">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Développement des progiciels</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="uk-child-width-1-3@m" uk-grid>
-        <!--  Business Intelligence -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service4.jpg" alt="Business Intelligence">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Business Intelligence</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Intégration des ERP -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service5.jpg" alt="Intégration des ERP">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Intégration des ERP</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Les mini formations -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service6.jpg" alt="Les mini formations">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Les mini formations</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="uk-child-width-1-3@m" uk-grid>
-        <!-- Accompagnement et conseil -->
+        {% for service in services %}
+         <!-- {{service.title}} -->
         <div>
           <div class="uk-card uk-card-default">
             <div class="uk-card-media-top">
-              <img src="service7.jpg" alt="Accompagnement et conseil">
+              <img src="{{ service.imageUrl }}" alt="{{service.title}}">
             </div>
             <div class="uk-card-body">
-              <h3 class="uk-card-title">Accompagnement et conseil</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Intégration des solutions IA -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service8.jpg" alt="Intégration des solutions IA">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Intégration des solutions IA</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Installation des caméras de surveillances -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service9.jpg" alt="Installation des caméras de surveillances">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Installation des caméras de surveillances</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-     <div class="uk-child-width-1-3@m" uk-grid>
-        <!-- Installation et administration des SE -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service10.jpg" alt="Installation et administration des SE">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Installation et administration des SE</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Marketing digital -->
-        <div>
-          <div class="uk-card uk-card-default">
-            <div class="uk-card-media-top">
-              <img src="service11.jpg" alt="Marketing digital">
-            </div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">Marketing digital</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales, lorem vel aliquet luctus, est dui ullamcorper dolor, ac dignissim nunc elit sit amet lectus.</p>
+              <h3 class="uk-card-title">{{service.title}} </h3>
+              <p>{{service.content}}</p>
             </div>
           </div>
         </div>
 
+        {% endfor %}
       </div>
 
     </div>

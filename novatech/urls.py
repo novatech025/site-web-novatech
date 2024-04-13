@@ -29,4 +29,4 @@ urlpatterns = [
     path('event/',include("event.urls")),
     path('contact/', include("contact.urls")),
     path('',include("Nova_tech.urls")),
-]
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
