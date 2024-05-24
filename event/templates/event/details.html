@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% load myfilter %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'event/details.css' %}">
+<main>
+    <div class="event-banner" style="background-image: url('{{ event.illustration_image.url }}');">
+        <div class="opacity-event-banner">
+            <div class="sup-event-banner">
+                <div class="event-banner-left-side">
+                    <div class="calendar-div">
+                        <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="var(--color3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1H5a1 1 0 0 0-1 1v12c0 .6.4 1 1 1Zm3-7h0v0h0v0Zm4 0h0v0h0v0Zm4 0h0v0h0v0Zm-8 4h0v0h0v0Zm4 0h0v0h0v0Zm4 0h0v0h0v0Z" />
+                        </svg>
+                    </div>
+                    <hr>
+                    <p><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="var(--color3)"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm13.7-1.3a1 1 0 0 0-1.4-1.4L11 12.6l-1.8-1.8a1 1 0 0 0-1.4 1.4l2.5 2.5c.4.4 1 .4 1.4 0l4-4Z"
+                                clip-rule="evenodd" />
+                        </svg> {{ event.start_at|event_status:event.end_at }}</p>
+
+                    <p><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="var(--color3)"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm13.7-1.3a1 1 0 0 0-1.4-1.4L11 12.6l-1.8-1.8a1 1 0 0 0-1.4 1.4l2.5 2.5c.4.4 1 .4 1.4 0l4-4Z"
+                                clip-rule="evenodd" />
+                        </svg> Du
+                        {{ event.start_at }}</p>
+                    <p><svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="var(--color3)"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M2 12a10 10 0 1 1 20 0 10 10 0 0 1-20 0Zm13.7-1.3a1 1 0 0 0-1.4-1.4L11 12.6l-1.8-1.8a1 1 0 0 0-1.4 1.4l2.5 2.5c.4.4 1 .4 1.4 0l4-4Z"
+                                clip-rule="evenodd" />
+                        </svg> Au {{ event.end_at }}</p>
+
+                </div>
+                <div class="event-banner-right-side">
+                    <h1>{{ event.title }}</h1>
+                    <p>{{ event.subtitle }}</p>
+
+                    {% for _ in "xxxxx"|rjust:"10" %}
+                    <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg" fill="var(--color3)" viewBox="0 0 24 24">
+                        <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z"/>
+                      </svg>
+                      
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="event-detail-content">
+        {% if event.illustration_video %}
+        <h2>PRESENTATION</h2>
+        <hr>
+        <div class="video-frame">
+            <iframe class="event-illustration_video" src="{{ event.illustration_video }}"
+                uk-video="autoplay: false"></iframe>
+        </div>
+        {% endif %}
+        <h2>DESCRIPTION</h2>
+
+        {{ event.description|safe }}
+    </div>
+</main>
+{% endblock content %}

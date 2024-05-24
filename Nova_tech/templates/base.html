@@ -1,0 +1,40 @@
+{% load static %}
+<html lang="fr">
+
+<head>
+    <!--css import -->
+    <link rel="stylesheet" href="{% static 'Nova_tech/css/uikit.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Nova_tech/css/uikit.css' %}">
+    <link rel="stylesheet" href="{% static 'Nova_tech/css/main.css' %}">
+    <script src="{% static 'Nova_tech/js/uikit.js' %}"></script>
+
+    <script src="{% static 'Nova_tech/js/uikit-icons.min.js' %}"></script>
+
+    <meta charset="UTF-8">
+
+    <!-- Le tire de la page qui sera remplacé dans toutes les pages avec une valeur donnée explicitement ou provenant de la vue  -->
+    {% block title %}
+    <title>{{ title }}</title>
+    {% endblock %}
+</head>
+
+<body>
+    <!--header-->
+    {% include "Nova_tech/component/header.html" %}
+    <!--fin header-->
+
+
+    <!--body-->
+    {% block content %}
+
+    {% endblock %}
+    <!--end body-->
+
+
+    <!--footer-->
+    {% include "Nova_tech/component/footer.html" %}
+    <!--fin footer-->
+
+</body>
+
+</html>

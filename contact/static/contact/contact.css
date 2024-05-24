@@ -1,0 +1,28 @@
+.errorlist{
+    color: red;
+}
+#required{
+    background-color: black;
+}
+.nom,.mail,.message,#envoyer{
+    width: 50%;
+    padding: 1%;
+    margin: 2%;
+}
+#envoyer{
+    width: 52%;
+    padding: 2%;
+    text-transform: capitalize;
+    background-color: brown;
+    
+
+}
+/* .lefte,.righte{
+    float: left;
+} */
+.supcont{
+    display: flex;
+}
+.message{
+    height: 50px;
+}
