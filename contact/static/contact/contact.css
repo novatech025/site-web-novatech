@@ -1,37 +1,172 @@
-.errorlist{
-    color: red;
+.contact {
+    background-color: rgba(15, 0, 108, 0.1);
+    font-family: var(--content-font-family);
+    position: relative;
 }
 
-#required{
-    background-color: black;
+h1,
+h2,
+h3 {
+    font-size: 30px;
+    color: var(--color1);
+    font-weight: bold;
 }
 
-.message-form {
-    background-color: red;
+.question_info {
+    padding: 10px 5%;
 }
 
-.nom, .mail, #envoyer {
-    width: 50%;
-    padding: 1%;
-    margin: 2%;
-}
 
-#envoyer{
-    width: 52%;
-    padding: 2%;
-    text-transform: capitalize;
-    background-color: brown;
-    
 
-}
-/* .lefte,.righte{
+#contact_info,
+#form_contact {
     float: left;
-} */
-.supcont{
-    display: flex;
-    /* background-color: red !important; */
-    padding: 5%;
+    box-sizing: border-box;
+    margin: 0%;
+    height: 100vh;
+    border-radius: 16px;
 }
-.message{
-    height: 50px;
+
+#contact_info {
+    width: 50%;
+    border: none;
+    box-shadow: 10px 2px 10px 4px rgba(15, 0, 108, 0.1);
+    padding: 10px 5%;
+}
+
+#form_contact {
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    margin-left: 1%;
+    align-items: center;
+    position: relative;
+    background-color: #0a1428;
+}
+
+
+#form_contact form label,
+#form_contact form p {
+    color: #fff;
+    font-size: 16px;
+}
+
+
+
+#form_contact form {
+    width: 70%;
+    padding: 10px 5%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 16px;
+    z-index: 1;
+
+}
+
+
+#form_contact form #p1_form {
+    color: var(--color5);
+    font-weight: bold;
+}
+
+
+#form_contact form input,
+#form_contact form textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+#form_contact form input:focus,
+#form_contact form textarea:focus,
+#form_contact form input:valid,
+#form_contact form textarea:valid {
+    border-color: var(--color3);
+}
+
+.envoi_cont {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--color1);
+    padding: 13px;
+    cursor: pointer;
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+
+
+.supcont {
+    width: 100%;
+    display: table;
+    clear: both;
+    background-color: rgba(15, 0, 108, 0.1);
+    background-size: cover;
+    padding: 0%;
+    margin: 0%;
+}
+
+
+#form_contact .blog {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(360deg, var(--color1), var(--second-color3), var(--color7), var(--color4), var(--second-color2), var(--color3));
+    border-radius: 70% 30% 65% 35% / 47% 58% 42% 53% ;
+    bottom: 10px;
+    right: 100px;
+    transform: rotate(60deg);
+    animation-name: blog;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blog {
+    5% {
+        border-radius: 70% 30% 65% 35% / 47% 58% 42% 53% ;
+        bottom: 20px;
+        right: 110px;
+        transform: rotate(60deg);
+    }
+    
+    20% {
+        border-radius: 29% 71% 65% 35% / 48% 58% 42% 52%;
+        bottom: 20px;
+        left: 100px;
+        transform: rotate(30deg);
+        
+    }
+    
+    50% {
+        border-radius: 40% 60% 54% 46% / 39% 77% 23% 61% ;
+        top: 30px;
+        left: 100px;
+        transform: rotate(-120deg);
+    }
+    75% {
+        border-radius: 57% 43% 54% 46% / 78% 77% 23% 22% ;
+        top: 30px;
+        right: 120px;
+        transform: rotate(-60deg);
+    }
+    
+    90% {
+        border-radius: 64% 36% 47% 53% / 47% 58% 42% 53% ;
+        bottom: 50px;
+        right: 120px;
+        transform: rotate(-30deg);
+    }
+}
+
+.citation_cont {
+    padding: 10px 5%;
 }
