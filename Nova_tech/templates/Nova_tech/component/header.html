@@ -16,8 +16,8 @@
                     </a>
                     <ul class="uk-navbar-nav">
                         <li class="uk-active"><a href="/">Accueil</a></li>
-                        <li><a href="">Nos services</a></li>
-                        <li><a href="#">Mission et vision</a></li>
+                        <li><a href="{% url 'services' %}">Nos services</a></li>
+                        <li><a href="{% url 'missions' %}">Mission et vision</a></li>
                         <li><a href="#">Nos réalisations</a></li>
                         <li><a href="{% url 'event:index' %}">Évènements</a></li>
                         <li><a href="{% url 'contact:index' %}">Contact</a></li>

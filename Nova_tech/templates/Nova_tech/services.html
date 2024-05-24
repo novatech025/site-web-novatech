@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'Nova_tech/css/services.css' %}">
+  <!-- Section Nos Services -->
+  <section class="uk-section">
+    <div class="uk-container">
+      <h2 class="service uk-heading-medium">Nos Services</h2>
+      <div class="uk-child-width-1-3@m" uk-grid>
+
+        {% for service in services %}
+         <!-- {{service.title}} -->
+        <div>
+          <div class="uk-card uk-card-default">
+            <div class="uk-card-media-top">
+              <img src="{{ service.imageUrl }}" alt="{{service.title}}">
+            </div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title">{{service.title}} </h3>
+              <p>{{service.content}}</p>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}
