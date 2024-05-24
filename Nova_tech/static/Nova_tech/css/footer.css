@@ -7,6 +7,10 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    padding-top: 30px;
+    /* border: 10px solid var(--color3); */
+    /* box-sizing: border-box; */
+    clip-path: polygon(0px 5%, 20% 0px, 100% 5%, 100% 120%, 0px 120%);
 }
 
 .sub-top-footer-div {
@@ -15,6 +19,8 @@ footer {
     padding: 5%;
     padding-bottom: 0px;
     padding-top: 100px;
+    /* clip-path: polygon(0px 0px, 5% 3%, 100% 0%, 100% 100%, 0px 100%); */
+
 }
 
 .top-footer-div {
