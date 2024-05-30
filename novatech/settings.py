@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'event',
     'tinymce',
     'contact',
+    'testimony',
 ]
 
 MIDDLEWARE = [

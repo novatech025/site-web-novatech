@@ -27,6 +27,7 @@
 
 
 
+
 .home-banner {
     display: flex;
     flex-direction: column;
@@ -58,7 +59,7 @@
 .why-us-div {
     height: 600px;
     /* margin: 10px; */
-    padding: 20px 50px;
+    padding: 50px;
     box-sizing: content-box;
     /* border-radius: 20px; */
     background-color: rgba(15, 0, 108, 0.1);
@@ -68,14 +69,15 @@
     gap: 20px;
     /* opacity: 0.1; */
     /* overflow: hidden; */
+    background-color: white;
 }
 
 .why-us-left-div {
     width: 40%;
 }
 
-.why-us-left-div p {
-
+.home_promary_description {
+  font-size: 30px;
 }
 
 .why-us-right-div {
@@ -90,10 +92,13 @@
 
 }
 
-.why-us-div h2 {
+.home_title_h2 {
     font-size: 60px;
     color: var(--color1);
     font-weight: bold;
+    text-shadow: 2px 2px 1px 2px rgb(199, 199, 199), -6px -6px 5px 2px var(--color1);
+    text-shadow: rgba(0,0,0,0.4) 3px 3px 3px;
+
 }
 
 
@@ -192,16 +197,203 @@
 
 
 
-
+.home_services_nedd {
+  padding: 100px 50px;
+  box-sizing: border-box;
+  background-color: rgba(15, 0, 108, 0.1);
+  /* margin: 50px 0px; */
+  /* background-color: red; */
+}
 
 
 .home-services-div {
     border-radius: 30px;
-    height: 900px;
+    height: 700px;
     /* background: linear-gradient(70deg, var(--color1) 2%, var(--color5) 40%); */
-    width: 90%;
+    /* width: 100%; */
     /* margin: auto; */
-    margin: 40px auto;
+    padding: 40px;
+    position: relative;
+    /* margin: 50px; */
+    box-sizing: border-box;
+    /* overflow: hidden; */
+  box-shadow: var(--color3) 3px 3px 3px;
+  background-color: white;
+
+    
+}
+
+.home-services-div svg {
+  border-radius: 30px;
+  
 }
 
 
+.svg_wave_1 {
+  bottom: 0px;
+  right: 0px;
+  z-index: 3;
+  position: absolute;
+  /* background-color: red; */
+  /* width: 2000px; */
+}
+
+.svg_wave_2 {
+  bottom: 20px;
+  right: 0px;
+  z-index: 4;
+  position: absolute;
+  /* opacity: 0.5; */
+
+}
+
+.svg_wave_3 {
+  bottom: 40px;
+  right: 0px;
+  z-index: 5;
+  position: absolute;
+
+}
+
+.sub_ordi_fusee_up_div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  height: 80%;
+  width: 100%;
+  padding: 20px;
+  /* box-shadow: var(--color3) 3px 3px 3px; */
+box-sizing: border-box;
+}
+
+
+.sub_ordi_fusee_up_div > div {
+  display: flex;
+  justify-content: space-between;
+  height: 90%;
+  flex-direction: row;
+  /* width: 100%; */
+  /* background-color: red; */
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.ordi_fusee_up_div {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 3;
+}
+
+
+.sub_ordi_fusee_up_div > div p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 4;
+  padding: 10px;
+  border-top: 5px solid var(--color3);
+}
+
+
+.home_security_div {
+  width: 100%;
+  background-color: white;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+.home_security_div > div {
+    display: flex;
+    gap: 5%;
+}
+
+.home_security_div_left {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  justify-content: center;
+
+}
+
+.home_security_div_left p {
+  /* font-size: 30px; */
+
+}
+
+.image_security_home_div {
+  height: 500px;
+  /* width: 200px; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 3;
+}
+
+.sub_discuss_project_div {
+  padding: 80px 40px;
+  padding-right: 0px;
+}
+
+.discuss_project_div {
+  background-color: var(--color1);
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  padding: 20px;
+  display: flex;
+
+}
+
+.image_discuss_project {
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex: 2;
+}
+
+.discuss_project_div_right_div {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.discuss_project_div_right_div h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  /* text-shadow: 2px 2px 1px 2px rgb(199, 199, 199), -6px -6px 5px 2px var(--color1); */
+  text-shadow: rgba(215, 215, 215, 0.9) 1px 1px 1px;
+
+}
+
+
+.discuss_project_div_right_div a {
+  border-radius: 60px;
+  padding: 20px 80px;
+  /* background-color: ; */
+  color: white;
+  border: 5px solid white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: 0.3s all ease;
+  font-size: 20px;
+
+}
+
+.discuss_project_div_right_div a svg {
+  transform: rotate(90deg);
+  transition: 0.3s all ease;
+
+}
+
+.discuss_project_div_right_div a:hover svg {
+  transform: rotate(0deg);
+  transition: 0.3s all ease;
+}
+
+.discuss_project_div_right_div a:hover {
+  text-decoration: none;
+}

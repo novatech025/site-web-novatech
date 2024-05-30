@@ -14,6 +14,7 @@ class EventModel(models.Model):
     published = models.BooleanField(default=True, verbose_name="publié")
     illustration_image = models.ImageField(blank=False, null=False, upload_to='images/events/%Y/%m/%d', verbose_name="image d'illustration")
     illustration_video = models.CharField(max_length=1000, blank=True, null=True, verbose_name="lien de la vidéo d'illustration")
+    show_at_home = models.BooleanField(default=False, blank=False, null=False, verbose_name="afficher à l'accueil")
     
     def __str__(self):
         return self.title
