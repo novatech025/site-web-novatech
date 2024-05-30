@@ -10,3 +10,4 @@ db.sqlite3-journal
 media/
 migrations/
 /novatech/configMail.py
+
